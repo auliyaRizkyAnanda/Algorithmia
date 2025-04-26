@@ -1,0 +1,173 @@
+body {
+  background-image: url('bg.png');
+  background-size: cover; /* Agar gambar menutupi seluruh elemen */
+  background-position: center center; /* Menjaga gambar tetap terpusat */
+  background-repeat: no-repeat; /* Agar gambar tidak diulang */
+  font-family: 'Shadows Into Light', cursive;
+  overflow: hidden; /* Menonaktifkan scroll */
+  justify-content: center; /* Menjaga konten tetap di tengah */
+}
+
+.postcard {
+  display: grid;
+  grid-template-columns: 0.80fr 0.30fr; /* Penyesuaian agar lebih simetris */
+  grid-template-rows: 1fr 1fr; /* Menentukan dua baris */
+  grid-template-areas:
+    "dear stamp"
+    "message test"; /* Sesuaikan area dengan nama elemen */
+  background-color: #f7f7f7;
+  width: 800px;
+  height: 500px;
+  justify-content: center;
+  margin: auto;
+  border-radius: 2%;
+  margin-top: 7%;
+  padding-bottom: 5%;
+  box-shadow: 0.8em 0.8em 15px rgba(0, 0, 0, 0.3);
+  perspective: 1000px; /* Menambahkan perspektif untuk efek 3D */
+  transition: transform 0.6s ease-in-out; /* Transisi smooth saat rotasi */
+  transform-style: preserve-3d; /* Agar efek flip terlihat 3D */
+}
+
+.text{
+  margin-right: 50px;
+}
+
+#mail {
+  grid-area: stamp; /* Menetapkan posisi stamp */
+  display: flex;
+  flex-direction: column; /* Mengatur agar gambar dan tombol berada dalam satu kolom */
+  justify-content: flex-start; /* Menempatkan gambar di bagian atas secara vertikal */
+  align-items: center; /* Menjaga gambar tetap di tengah secara horizontal */
+  position: relative;
+  top: 0; /* Menetapkan jarak posisi elemen ke atas */
+  margin-left: 10px;
+}
+
+#mail_stamp {
+  max-width: 200px;
+  height: auto;
+}
+
+#from {
+  font-size: 125%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  grid-area: from;
+}
+
+
+#message {
+  grid-area: message;
+  font-size: 119%;
+  grid-area: note;
+  margin-right: 7%;
+}
+
+.from-text {
+  display: block; /* Menjadikan elemen ini block supaya bisa menerima margin */
+  margin-top: 10px; /* Menambahkan jarak setelah dari, sesuai keinginan */
+}
+
+#address {
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  padding-top: 30%;
+  text-decoration: underline;
+  grid-area: test;
+  color: red;
+}
+
+#dear {
+  padding-top: 5%;
+  font-size: 200%;
+  grid-area: dear;
+}
+
+.arrow {
+  position: absolute;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  padding: 0px 30px;
+}
+
+.arrow.left {
+    left: 0px;
+    bottom: 0px;
+}
+
+.arrow.right {
+  right: 0px;
+  bottom: 0px;
+}
+
+#slider-container {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  margin: auto;
+}
+
+#gambar {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: max-content;
+}
+
+#gambar img {
+  width: 150px; /* ukuran sama dengan container */
+  flex-shrink: 0;
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Agar gambar bisa dibungkus ke baris berikutnya */
+  justify-content: center; /* Membuat jarak antar gambar */
+  gap: 10px;
+  margin: 20px; /* Jarak antar gambar */
+}
+
+.image-gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 2px;
+}
+
+/* Efek flip ketika kartu dibalik */
+.postcard.flipped {
+  transform: rotateY(180deg); /* Membalikkan kartu */
+}
+
+.postcard.flipped .back {
+  display: block; /* Tampilkan bagian belakang saat dibalik */
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Sembunyikan sisi belakang saat kartu terbalik */
+}
+
+.front {
+  display: flex;
+  top: 50px;
+  left: 30px; /* Posisi depan kartu */
+}
+
+/* Sisi belakang kartu */
+.back {
+  transform: rotateY(180deg); /* Memastikan bagian belakang berputar agar teks tidak terbalik */
+  display: flex;
+  justify-content: center;  /* Memusatkan konten secara horizontal */
+  align-items: center;      /* Memusatkan konten secara vertikal */
+  flex-direction: column;   /* Agar gambar berada dalam kolom */
+  text-align: center;
+  padding: 20px;
+}
+

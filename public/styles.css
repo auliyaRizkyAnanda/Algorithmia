@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center; /* Untuk menempatkan konten secara horizontal di tengah */
+    align-items: center; /* Untuk menempatkan konten secara vertikal di tengah */
+    height: 100vh; /* Pastikan body mengambil seluruh tinggi viewport */
+    margin: 0; /* Menghapus margin default browser */
+}
+
+.form-container {
+    text-align: center; /* Menjaga teks "Login" dan elemen lainnya tetap di tengah secara horizontal */
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Membatasi lebar form supaya tidak terlalu lebar */
+}
+label {
+    text-align: left; /* Menjaga label tetap berada di kiri */
+    display: block; /* Agar label menjadi blok dan mengatur input di bawahnya */
+    margin-bottom: 5px; /* Memberikan jarak antara label dan input */
+}
+
+h2 {
+    margin-bottom: 20px; /* Memberikan jarak antara judul dan form */
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%; /* Agar input mengisi seluruh lebar form */
+    box-sizing: border-box; /* Untuk memastikan padding dihitung dalam ukuran lebar */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Agar tombol mengisi seluruh lebar form */
+    margin-top: 10px; /* Memberikan jarak antara input dan tombol */
+}
+
+button:hover {
+    background-color: #45a049;
+}

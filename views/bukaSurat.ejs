@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> <%= firstName %> </title> 
+  <link rel="icon" href="logo.png">
+  <!-- css style sheet -->
+  <link href="/open.css" rel="stylesheet">
+  <!-- Tab icon -->
+  <link rel="icon" href="../img/CJM.png">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+</head>
+  
+<body>
+  <div class="wrap">
+    <div class="postcard">
+      <!-- Front of the card -->
+      <div class="front">
+        <div class="text">
+          <span id="dear">Dear <%= firstName %>,</span> 
+          <br>
+          <span id="message">
+            <%= message %> 
+          </span>
+          <span class="from-text">
+          <br>dari,
+          <br>Nanda
+          </span>
+        </div>
+        <div id="mail">
+          <span>
+            <img id="mail_stamp" src="<%= fotoProfil %>" alt="foto" />
+          </span>
+          <button class="arrow left" id="prev">&#8592;</button>
+        </div>
+      </div>
+
+      <!-- Back of the card -->
+      <div class="back">
+        <h1> Algorithmia Fest 2024</h1>
+        <h3> Media Pulse </h3>
+        <div class="image-gallery">
+          <img src="banteng.jpg" >
+          <img src="makanPembuka.jpg">
+          <img src="makan.jpg">
+          <img src="makanPenutup.jpg">
+          <img src="rapat.jpg">
+          <img src="closing.jpg">
+        </div>
+      </div>
+      <button class="arrow right" id="next">&#8594;</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
